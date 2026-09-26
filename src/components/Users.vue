@@ -6,6 +6,7 @@ import type { User } from '../types';
 
 const users = ref<User[]>(usersData);
 
+// Стани фільтрів та сортування
 const genderFilter = ref<'all' | 'male' | 'female'>('all');
 const ageFilter = ref<'all' | '18+'>('all');
 const sortConfig = ref<'none' | 'nameAsc' | 'nameDesc' | 'ageAsc' | 'ageDesc'>('none');
@@ -13,14 +14,17 @@ const sortConfig = ref<'none' | 'nameAsc' | 'nameDesc' | 'ageAsc' | 'ageDesc'>('
 const filteredAndSortedUsers = computed(() => {
   let result = users.value;
 
+  // Фільтрація за статтю
   if (genderFilter.value !== 'all') {
     result = result.filter(u => u.gender === genderFilter.value);
   }
 
+  // Фільтрація за віком
   if (ageFilter.value === '18+') {
     result = result.filter(u => u.dob.age >= 18);
   }
 
+  // Сортування (копіюємо масив через slice(), щоб не мутувати оригінал)
   if (sortConfig.value !== 'none') {
     result = result.slice().sort((a, b) => {
       if (sortConfig.value === 'nameAsc') return a.name.first.localeCompare(b.name.first);
