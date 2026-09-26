@@ -1,127 +1,20 @@
-import type { User } from '../types';
-
-export const usersData: User[] = [
-  // --- ДІВЧАТА (1-5) ---
-  {
-    id: 1,
-    gender: "female",
-    name: { title: "Mrs", first: "Emma", last: "Lampi" },
-    location: { street: { number: 2304, name: "Siilitie" }, city: "Hausjärvi", state: "Uusimaa", country: "Finland", postcode: 98555, timezone: { offset: "+8:00", description: "Beijing, Perth" } },
-    email: "emma.lampi@example.com",
-    dob: { date: "2001-03-08T01:39:19.084Z", age: 25 }, // 18-30 (young)
-    phone: "02-689-410", cell: "043-730-12-94",
-    picture: "/users/1.png",
-    hobbies: ["Travel", "Photography", "Music"],
-    details: "Емма працює фотографом і дуже любить подорожувати скандинавськими країнами."
-  },
-  {
-    id: 2,
-    gender: "female",
-    name: { title: "Miss", first: "Anna", last: "Koval" },
-    location: { street: { number: 12, name: "Ternopilska" }, city: "Lviv", state: "Lvivska", country: "Ukraine", postcode: 79000, timezone: { offset: "+2:00", description: "Kyiv, Helsinki" } },
-    email: "anna.koval@example.com",
-    dob: { date: "2010-05-14T10:12:00.000Z", age: 16 }, // до 18 (minor)
-    phone: "03-111-222", cell: "050-123-45-67",
-    picture: "/users/2.png",
-    hobbies: ["Drawing", "Volleyball"],
-    details: "Анна навчається в 10-му класі і професійно займається волейболом."
-  },
-  {
-    id: 3,
-    gender: "female",
-    name: { title: "Ms", first: "Sarah", last: "Connor" },
-    location: { street: { number: 404, name: "Cyber St" }, city: "Los Angeles", state: "California", country: "USA", postcode: 90001, timezone: { offset: "-8:00", description: "Pacific Time" } },
-    email: "sarah.c@example.com",
-    dob: { date: "1989-11-02T08:30:00.000Z", age: 37 }, // 31-50 (adult)
-    phone: "04-555-666", cell: "099-000-11-22",
-    picture: "/users/3.png",
-    hobbies: ["Fitness", "Reading", "Shooting"],
-    details: "Сара обожнює спорт і працює інструктором у фітнес-центрі."
-  },
-  {
-    id: 4,
-    gender: "female",
-    name: { title: "Mrs", first: "Maria", last: "Garcia" },
-    location: { street: { number: 77, name: "Gran Via" }, city: "Madrid", state: "Madrid", country: "Spain", postcode: 28013, timezone: { offset: "+1:00", description: "Madrid, Paris" } },
-    email: "maria.garcia@example.com",
-    dob: { date: "1965-01-22T14:20:00.000Z", age: 61 }, // понад 50 (senior)
-    phone: "05-777-888", cell: "067-555-44-33",
-    picture: "/users/4.png",
-    hobbies: ["Gardening", "Cooking", "Knitting"],
-    details: "Марія має власний сад і вирощує найкращі троянди в Мадриді."
-  },
-  {
-    id: 5,
-    gender: "female",
-    name: { title: "Miss", first: "Yuki", last: "Tanaka" },
-    location: { street: { number: 8, name: "Shibuya" }, city: "Tokyo", state: "Kanto", country: "Japan", postcode: 1500002, timezone: { offset: "+9:00", description: "Tokyo, Osaka" } },
-    email: "yuki.t@example.com",
-    dob: { date: "2005-08-15T09:00:00.000Z", age: 21 }, // 18-30 (young)
-    phone: "06-999-000", cell: "063-777-88-99",
-    picture: "/users/5.png",
-    hobbies: ["Cosplay", "Anime", "Gaming"],
-    details: "Юкі вивчає графічний дизайн та створює арти для ігор."
-  },
-
-  // --- ХЛОПЦІ (6-10) ---
-  {
-    id: 6,
-    gender: "male",
-    name: { title: "Mr", first: "Oleg", last: "Ivanov" },
-    location: { street: { number: 15, name: "Holovna" }, city: "Chernivtsi", state: "Chernivtsi", country: "Ukraine", postcode: 58000, timezone: { offset: "+2:00", description: "Kyiv" } },
-    email: "oleg.iv@example.com",
-    dob: { date: "1998-04-10T12:00:00.000Z", age: 28 }, // 18-30 (young)
-    phone: "07-123-456", cell: "050-999-88-77",
-    picture: "/users/6.png",
-    hobbies: ["Programming", "Chess", "Cycling"],
-    details: "Олег працює Software Engineer і цікавиться розробкою мікроконтролерів."
-  },
-  {
-    id: 7,
-    gender: "male",
-    name: { title: "Mr", first: "Tom", last: "Holland" },
-    location: { street: { number: 20, name: "Queen St" }, city: "London", state: "England", country: "UK", postcode: 10001, timezone: { offset: "+0:00", description: "London" } },
-    email: "tom.h@example.com",
-    dob: { date: "2009-06-01T15:30:00.000Z", age: 17 }, // до 18 (minor)
-    phone: "08-333-444", cell: "096-111-22-33",
-    picture: "/users/7.png",
-    hobbies: ["Parkour", "Acting"],
-    details: "Том закінчує школу і мріє стати відомим актором."
-  },
-  {
-    id: 8,
-    gender: "male",
-    name: { title: "Mr", first: "John", last: "Doe" },
-    location: { street: { number: 123, name: "Main St" }, city: "New York", state: "NY", country: "USA", postcode: 10001, timezone: { offset: "-5:00", description: "Eastern Time" } },
-    email: "john.doe@example.com",
-    dob: { date: "1981-12-12T10:10:00.000Z", age: 44 }, // 31-50 (adult)
-    phone: "09-555-777", cell: "067-222-33-44",
-    picture: "/users/8.png",
-    hobbies: ["Fishing", "Cars"],
-    details: "Джон працює менеджером, а на вихідних обожнює їздити на риболовлю."
-  },
-  {
-    id: 9,
-    gender: "male",
-    name: { title: "Mr", first: "Robert", last: "Smith" },
-    location: { street: { number: 45, name: "High St" }, city: "Sydney", state: "NSW", country: "Australia", postcode: 2000, timezone: { offset: "+10:00", description: "Sydney" } },
-    email: "robert.s@example.com",
-    dob: { date: "1970-03-30T11:22:00.000Z", age: 56 }, // понад 50 (senior)
-    phone: "10-222-333", cell: "050-444-55-66",
-    picture: "/users/9.png",
-    hobbies: ["Golf", "Wine tasting"],
-    details: "Роберт — досвідчений архітектор. Любить грати в гольф."
-  },
-  {
-    id: 10,
-    gender: "male",
-    name: { title: "Mr", first: "Liam", last: "Neeson" },
-    location: { street: { number: 99, name: "Dublin Rd" }, city: "Dublin", state: "Leinster", country: "Ireland", postcode: 10111, timezone: { offset: "+0:00", description: "Dublin" } },
-    email: "liam.n@example.com",
-    dob: { date: "2006-09-09T09:09:00.000Z", age: 20 }, // 18-30 (young)
-    phone: "11-888-999", cell: "093-666-77-88",
-    picture: "/users/10.png",
-    hobbies: ["Boxing", "Hiking"],
-    details: "Ліам навчається в університеті і займається боксом."
-  }
-];
+export interface User {
+  id: number;
+  gender: 'male' | 'female';
+  name: { title: string; first: string; last: string };
+  location: {
+    street: { number: number; name: string };
+    city: string;
+    state: string;
+    country: string;
+    postcode: number;
+    timezone: { offset: string; description: string };
+  };
+  email: string;
+  dob: { date: string; age: number };
+  phone: string;
+  cell: string;
+  picture: string;
+  hobbies: string[];
+  details: string;
+}
