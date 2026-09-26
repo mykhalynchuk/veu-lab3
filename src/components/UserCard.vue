@@ -44,21 +44,10 @@ const showDetails = ref(false);
 </template>
 
 <style scoped>
-.user-card {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  gap: 20px;
-  margin-bottom: 16px;
-  transition: background-color 0.3s ease;
-}
-.avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 8px;
-  object-fit: cover;
-}
+.user-card { border: 1px solid #ccc; border-radius: 12px; padding: 16px; display: flex; gap: 20px; margin-bottom: 16px; color: black; }
+.avatar { width: 150px; height: 150px; border-radius: 8px; object-fit: cover; }
+.info { display: flex; flex-direction: column; gap: 4px; }
+h2, h3, p { margin: 0; }
 .minor { background-color: #f3f4f6; border-color: #d1d5db; }
 .young { background-color: #dbeafe; border-color: #93c5fd; }
 .adult { background-color: #dcfce7; border-color: #86efac; }
