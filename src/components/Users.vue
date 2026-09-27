@@ -1,5 +1,5 @@
 <script setup lang="ts">
-/* eslint-disable vue/multi-word-component-names */
+
 import { ref, computed } from 'vue';
 import UserCard from './UserCard.vue';
 import { usersData } from '@/data/users.ts';
